@@ -56,7 +56,7 @@ nes_2 = ["\n<h2>NES</h2>", alist % (outdir + rarchgamesin + "?core=nestopia", "U
 
 # Generate HTML code for NES list
 for x in range(0, len(nes_1)):
-	nes_2.append(alist % (outdir + rarchgamesin + "?core=nestopia&rom=" + nes_1[x], os.path.splitext(nes_1[x])[0].capitalize()))
+	nes_2.append(alist % (outdir + rarchgamesin + "?core=nestopia&rom=chrome://downloads/#:~:text=https%3A//doc%2D0k%2D90%2Ddocs.googleusercontent.com/docs/securesc/msa02ftnk1v7qs4ra7npkgvdmga82cnr/q6607sv3gd06c10sjiuu33ve5dlnj2mk/1646259375000/03647310625643973541/03647310625643973541/1W6w7Sw4PvcmR_ZO0usT4amskfoAldSjD%3Fe%3Ddownload%26ax%3DACxEAsY4EEncqTG1fgP12vGjNgzC6ogpxNyoHOFIHfZA6Ac1hcCi60Y7RO%2DJFvnjFbuflKe" + nes_1[x], os.path.splitext(nes_1[x])[0].capitalize()))
 
 # Make SNES lists
 snes_1 = list(chain.from_iterable([[os.path.basename(x) for x in glob.glob(outdir + rarchgamesin + romdir + y)] for y in presnes]))
