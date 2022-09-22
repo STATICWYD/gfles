@@ -1,0 +1,387 @@
+body{
+	margin:0px;
+	padding:0px;
+	position: absolute; 
+	height:100%;
+	width:100%;
+	background-size:cover;
+	font-style: regular;
+	font-family:"Myriad Pro", Myriad,"Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color:#f0f0f1;
+}
+
+.webgl-content,#gameContainer,canvas,#loadingBlock,#errorBrowserBlock{
+	position:absolute;
+	height:calc(100% - 2px);
+	width:calc(100% - 2px);
+	background-color:#f0f0f1;
+	border:1px solid #c6c9ca;
+}
+
+.subtitle{
+	color:#1896a7;
+	font-size:2.5vh;
+	padding-bottom:3vh;
+	padding-top: 3vh;
+	display: block;
+	height:3vh;
+	width:800px;
+	margin:auto;
+	text-align: center;
+}
+
+.logo{
+	height:25vh;
+	width:auto;
+	display: block;
+	margin:auto;
+	margin-top:2vh;
+}
+
+#loadingBlock,#errorBrowserBlock{
+	background-image:url("../img/background.png");
+	background-size:cover;
+}
+
+#emptyBar{
+	background: url("../img/progressEmpty.png") no-repeat right;
+	float: right; 
+	width: 10%; 
+	height: 100%; 
+	display: inline-block;
+}
+
+#fullBar{
+	background: url("../img/progressFull.png") no-repeat right;
+	float: left; 
+	width: 90%; 
+	height: 100%; 
+	display: inline-block;
+}
+
+#progressBar,#warningBrowserBlock,#warningMobileBlock,#errorContent{
+	height:25vh;
+	width:auto;
+	margin:auto;
+	text-align: center;
+}
+
+#progressBar{
+	height:8vh;
+	color:#666666;
+	font-size:23px;
+}
+
+#warningBrowserBlock,#warningMobileBlock,#errorContent{
+	margin-top:15vh;
+	color:#666666;
+	font-size:2.3vh;
+}
+
+.browserIcons{
+	display: inline-flex;
+	margin-top:2vh;
+}
+
+.browserIcons a{
+	width:150px;
+}
+
+#errorContent{
+	font-size:3vh;
+	margin-top:5vh;
+}
+
+.centered{
+	height: 50px;
+	width: auto;
+	max-width: 600px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*#emptyBar2{
+			position: absolute;
+			display:block;
+			background: url("./TemplateData//img/progressEmpty.png") no-repeat right;
+			width: 110vh;
+			height: 5vh;
+		}
+		#fullBar2{
+			position: absolute;
+			display:block;
+			background: url("./TemplateData/img//progressFull.png") no-repeat right;
+			width: 110vh;
+			height: 5vh;
+		}
+		.fullbar {
+			transform-origin: center left;
+  			animation: fullbarmove 10s linear;
+		}
+		@keyframes fullbarmove {
+			
+			0% {
+				transform:scale(0.1,1);
+			}
+			100% {
+				transform:scale(1,1);
+			}
+		}
+		*/
+		
+		.fullbar {
+			animation: fullbarmove 20s linear;
+	  }
+	  @keyframes fullbarmove {
+		  0% {
+			  width: 5%;
+		  }
+		  30% {
+			  width: 40%;
+		  }
+		  100% {
+			  width: 95%;
+		  }
+	  }
+	  .emptybar {
+			animation: emptybarmove 20s linear;
+	  }
+	  @keyframes emptybarmove {
+		  0% {
+			  width: 95%;
+		  }
+		  30% {
+			  width: 60%;
+		  }
+		  100% {
+			  width: 5%;
+		  }
+	  }
+
+
+		  .loader {
+			  border: 6px solid #cecece; /* Light grey */
+			  border-top: 6px solid rgb(189, 51, 51); /* Blue #3498db*/
+			  border-radius: 50%;
+			  width: 30px;
+			  height: 30px;
+			  animation: spin 2s linear infinite;
+  
+			  /*display: block;*/
+			  margin-left: auto;
+			  margin-right: auto;
+			  margin-top: 25px;
+		  }
+  
+		  @keyframes spin {
+			  0% { transform: rotate(0deg); }
+			  100% { transform: rotate(360deg); }
+		  }
+		  
+		  #bottomLeft {
+			  height: 50px;
+			  position: fixed;
+			  bottom: 0;
+			  left: 0;
+              padding-left:5px;
+		  }
+		  #bottomRight {
+			  position: fixed;
+			  bottom: 0;
+			  right: 0;
+		  }
+		  a#moregames {
+			  width: auto;
+			  height: auto;
+			  margin-right: 5px;
+			  padding: 6px 10px;
+			  color: #fff;
+			  background: 0 0;
+			  border: 2px solid #fff;
+			  border-radius: 2px;
+		  }
+		  
+		  a {
+			  width: auto;
+			  height: auto;
+			  color: #fff;
+			  background: 0 0;
+		  }
+		  a.aclass {
+			  position: relative; float: left; padding:9px; margin: 0px 0px; 
+              margin-left: 8px;
+			  font-size: 10px; 
+			  background-color:#1918189e; 
+			  border-radius:12px;
+			  -webkit-box-shadow:0 3px 6px rgba(0,0,0,.25),0 3px 6px rgba(0,0,0,.4);
+			  -moz-box-shadow:0 3px 6px rgba(0,0,0,.25),0 3px 6px rgba(0,0,0,.4);
+			  box-shadow:0 3px 6px rgba(0,0,0,.25),0 3px 6px rgba(0,0,0,.4);
+		  }
+		  #textMarket{
+			  height:28vh;
+			  width:auto;
+			  /*display: inherit;*/
+			  margin:auto;
+			  margin-top:2vh;
+			  margin-left: 20px;
+			  font-size: 1.3vh;
+		  }
+		  #mainVideo{
+			  margin:auto;
+			  
+			  width:15vh;
+			  height:25vh;
+			  margin-left: 7px;
+		  }
+
+		  .main-container {
+			  float: left;
+			  position: relative;
+			  left: 50%;
+		  }
+		  .fixer-container {
+			  float: left;
+			  position: relative;
+			  left: -50%;
+		  }
+		  .inlineblock{
+			  display: inline-block;
+		  }
+		  .floatClear{
+			  clear: left;
+		  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* When aspect-ratio is smaller than 4/3*/
+
+/*@media (max-aspect-ratio: 4/3){
+	
+	.webgl-content{
+		-webkit-transform: translate(0%, 0%); transform: translate(0%, 0%);
+		-webkit-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.15);
+		-moz-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.15);
+		box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.15);
+	}
+	
+	.keepRatio{
+		width:100%;
+		padding-top: 75%;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.webgl-content,#loadingBlock,#errorBrowserBlock{
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+
+	.logo{
+		width:25vw;
+		height:auto;
+		margin-top:1vh;
+	}
+	
+	.subtitle{
+		font-size:2vw;
+		height:10vw;
+		padding-bottom:1vw;
+		padding-top: 1vw;
+	}
+
+	.subtitle,#progressBar,#warningBrowserBlock,#warningMobileBlock,#errorContent{
+		width:80vw;
+	}
+	
+	#progressBar{
+		height:6vw;
+		margin-top: 2vw;
+		font-size:3vw;
+	}
+	
+	#emptyBar,#fullBar{
+		height: 2vw; 
+	}
+	
+	#warningBrowserBlock,#warningMobileBlock,#errorContent{
+		margin-top:3vw;
+		font-size:2vw;
+	}
+	
+	.browserIcons{
+		margin-top:1vw;
+	}
+	
+	.browserIcons a{
+		width:15vw;
+	}
+	
+	.browserIcons a img{
+		width:8vw;
+	}
+}*/
+
+
+/* When aspect-ratio is bigger than 16/9*/
+
+/*@media (min-aspect-ratio: 16/9){
+	body{
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:space-between;
+	}
+	
+	.keepRatio{
+		width:178vh;
+		height:100%;
+		margin:0 auto;
+	}
+	
+	.webgl-content,#gameContainer,canvas,#loadingBlock,#errorBrowserBlock{
+		width: inherit;
+	}
+	
+	.webgl-content{
+	-webkit-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.15);
+		-moz-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.15);
+		box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.15);
+	}
+	
+	.subtitle,#progressBar,#warningBrowserBlock,#warningMobileBlock,#errorContent{
+		width:100vh;
+	}
+}*/
